@@ -9,8 +9,9 @@
 
 		<!-- you should add all required extensions to this list, except platform extensions which are automatically required -->
 		<!-- <requires-extension name="cms"/> -->
-
-
+		<requires-extension name="hmc"/>
+		<requires-extension name="cuppytrail"/>
+		
 		<coremodule generated="true" manager="de.hybris.platform.cuppytrailhtmc.jalo.CuppytrailhmcManager" packageroot="de.hybris.platform.cuppytrailhtmc" />
 
 		<!-- <webmodule jspcompile="false" webroot="/cuppytrailhmc"/> -->
