@@ -20,7 +20,7 @@
 	<!--
 		Example Data POJO
 	
-	<bean class="de.hybris.platform.cuppytrailhtmc.data.MyPojo">
+	<bean class="de.hybris.platform.cuppytrailhmc.data.MyPojo">
 		<property name="id" type="String"/>
 		<property name="flag" type="boolean"/>
 	</bean>

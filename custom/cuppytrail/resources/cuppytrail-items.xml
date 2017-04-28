@@ -10,12 +10,14 @@
  Information and shall use it only in accordance with the terms of the
  license agreement you entered into with hybris.
  
+   
 -->
- 
+<!--
+    ATTENTION: This is just an example file. You have to edit it according to your needs.
+-->
 <items   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="items.xsd">
-    
-	<enumtypes>
+    <enumtypes>
         <enumtype code="StadiumType" autocreate="true" generate="true" dynamic="false">
             <value code="openair"/>
             <value code="enclosed"/>
@@ -25,14 +27,15 @@
             <value code="rail"/>
             <value code="plane"/>
         </enumtype>
-	</enumtypes>
-	
-	<relations>
-		<relation code="StadiumMatchRelation" localized="false" generate="true" autocreate="true">
-		   <sourceElement type="Stadium" qualifier="stadium" cardinality="one" />
-		   <targetElement type="Match" qualifier="matches" cardinality="many"/>
-		</relation>
-	</relations> 
+    </enumtypes>
+    <relations>
+        <relation code="StadiumMatchRelation"
+                localized="false" generate="true" autocreate="true">
+            <sourceElement type="Stadium" qualifier="stadium" cardinality="one"/>
+            <targetElement type="Match" qualifier="matches" cardinality="many"/>
+        </relation>
+    </relations>
+  
     <itemtypes>
         <itemtype code="Stadium" generate="true" autocreate="true">
             <deployment table="CuppyTrailStadium" typecode="10123" />
@@ -43,12 +46,12 @@
                 </attribute>
                 <attribute qualifier="capacity" type="java.lang.Integer">
                     <description>Capacity</description>
-                    <persistence type="property" />	
+                    <persistence type="property" />
                 </attribute>
-				<attribute type="StadiumType" qualifier="StadiumType">
-					<persistence type="property"/>
-					<defaultvalue>em().getEnumerationValue("StadiumType","openair")</defaultvalue>
-				</attribute>
+                <attribute type="StadiumType" qualifier="StadiumType">
+                    <persistence type="property"/>
+                    <defaultvalue>em().getEnumerationValue("StadiumType","openair")</defaultvalue>
+                </attribute>
             </attributes>
         </itemtype>
     </itemtypes>

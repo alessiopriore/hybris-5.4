@@ -38,21 +38,21 @@
 	
 	<!--  Example how to override a manager -->
 	<!--
-	<bean id="core.productManager"   class="de.hybris.platform.cuppytrailhtmc.jalo.CuppytrailhmcProductManager" 	init-method="init"	destroy-method="destroy" />
+	<bean id="core.productManager"   class="de.hybris.platform.cuppytrailhmc.jalo.CuppytrailhmcProductManager" 	init-method="init"	destroy-method="destroy" />
 	-->
 	
 	
  	<!--  Example how to configure the class to use for jalo session creation -->
 	<!--
 	<bean id="jalosession"   class="de.hybris.platform.jalo.JaloSessionFactory">
-		<property name="targetClassName" value="de.hybris.platform.cuppytrailhtmc.jalo.CuppytrailhmcJaloSession"/>
+		<property name="targetClassName" value="de.hybris.platform.cuppytrailhmc.jalo.CuppytrailhmcJaloSession"/>
 	</bean>
 	-->
 
 	
 	<!--  Example how to override an item  -->
 	<!-- 
-	<bean id="de.hybris.platform.jalo.product.Product" class="de.hybris.platform.cuppytrailhtmc.jalo.CuppytrailhmcProduct" scope="prototype" />		
+	<bean id="de.hybris.platform.jalo.product.Product" class="de.hybris.platform.cuppytrailhmc.jalo.CuppytrailhmcProduct" scope="prototype" />		
  	-->
 
 	<!--  
@@ -61,7 +61,7 @@
      -->
 	
 	<!-- 
-	<bean id="cuppytrailhmcProfBean" class="de.hybris.platform.cuppytrailhtmc.aop.CuppytrailhmcProfilingAspect"/>
+	<bean id="cuppytrailhmcProfBean" class="de.hybris.platform.cuppytrailhmc.aop.CuppytrailhmcProfilingAspect"/>
 	<aop:config proxy-target-class="true">
   		<aop:aspect id="cuppytrailhmcProfAspect" ref="cuppytrailhmcProfBean" >
     	  <aop:pointcut id="profiledMethods" 
