@@ -1,0 +1,25 @@
+
+
+INSERT_UPDATE Recipe; code[unique = true];nome[lang=it];descrizione[lang=it];tempo;difficolta(code);persone;recipeEntry(quantita)
+		;tortaallafragola;tortaallafragola;tortaallafragola;30;basso;3;1,2,3,4
+		;pastiera;pastiera;dolceconricotta;60;alto;4;1,2,3,5
+		;tiramisu;tiramisu;dolceconsavoiardiecaffe;15;basso;5;1,2,3,4
+		;sfogliatella;sfogliatella;pastasfogliaconricotta;45;alto;6;1,2,3,4
+		;baba;baba;dolcebagnatoconilrum;30;medio;3;1,2,3,4
+
+INSERT_UPDATE RecipeEntry;prodotto(code);quantita[unique = true];nome[lang=it];unity(code)
+				;acqua;1;tortaallafragola;pieces;
+				;lievito;4;pastiera;pieces;
+				;lievito1;2;tiramisu;pieces;
+				;lievito2;5;sfogliatella;pieces;
+				;zucchero;3;baba;pieces;
+				
+
+INSERT_UPDATE Food; code[unique = true];nome[lang=it];descrizione[lang=it]
+					;acqua;acqua; acqua naturale;
+					;lievito;lievito;livieto istantaneo;
+					;lievito1;livieto;livieto di birra;
+					;lievito2;livieto;livieto madre;
+					;zucchero;zucchero;normale;
+					;ricotta;ricotta;ricotta salata:
+					;zucchero1;zucchero;di canna;
