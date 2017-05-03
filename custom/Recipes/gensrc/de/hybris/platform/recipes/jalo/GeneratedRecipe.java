@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 2-mag-2017 17.18.42                         ---
+ * --- Generated at 3-mag-2017 12.12.11                         ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -26,11 +26,14 @@ import de.hybris.platform.jalo.c2l.Language;
 import de.hybris.platform.jalo.enumeration.EnumerationValue;
 import de.hybris.platform.jalo.type.CollectionType;
 import de.hybris.platform.recipes.constants.RecipesConstants;
+import de.hybris.platform.recipes.jalo.Menu;
 import de.hybris.platform.recipes.jalo.RecipeEntry;
 import de.hybris.platform.util.OneToManyHandler;
+import de.hybris.platform.util.Utilities;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -53,6 +56,13 @@ public abstract class GeneratedRecipe extends GenericItem
 	public static final String PERSONE = "persone";
 	/** Qualifier of the <code>Recipe.recipeEntry</code> attribute **/
 	public static final String RECIPEENTRY = "recipeEntry";
+	/** Qualifier of the <code>Recipe.menus</code> attribute **/
+	public static final String MENUS = "menus";
+	/** Relation ordering override parameter constants for Menu2Recipe from ((Recipes))*/
+	protected static String MENU2RECIPE_SRC_ORDERED = "relation.Menu2Recipe.source.ordered";
+	protected static String MENU2RECIPE_TGT_ORDERED = "relation.Menu2Recipe.target.ordered";
+	/** Relation disable markmodifed parameter constants for Menu2Recipe from ((Recipes))*/
+	protected static String MENU2RECIPE_MARKMODIFIED = "relation.Menu2Recipe.markmodified";
 	/**
 	* {@link OneToManyHandler} for handling 1:n RECIPEENTRY's relation attributes from 'many' side.
 	**/
@@ -233,6 +243,128 @@ public abstract class GeneratedRecipe extends GenericItem
 	public void setDifficolta(final EnumerationValue value)
 	{
 		setDifficolta( getSession().getSessionContext(), value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Recipe.menus</code> attribute.
+	 * @return the menus
+	 */
+	public Collection<Menu> getMenus(final SessionContext ctx)
+	{
+		final List<Menu> items = getLinkedItems( 
+			ctx,
+			false,
+			RecipesConstants.Relations.MENU2RECIPE,
+			null,
+			false,
+			false
+		);
+		return items;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Recipe.menus</code> attribute.
+	 * @return the menus
+	 */
+	public Collection<Menu> getMenus()
+	{
+		return getMenus( getSession().getSessionContext() );
+	}
+	
+	public long getMenusCount(final SessionContext ctx)
+	{
+		return getLinkedItemsCount(
+			ctx,
+			false,
+			RecipesConstants.Relations.MENU2RECIPE,
+			null
+		);
+	}
+	
+	public long getMenusCount()
+	{
+		return getMenusCount( getSession().getSessionContext() );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Recipe.menus</code> attribute. 
+	 * @param value the menus
+	 */
+	public void setMenus(final SessionContext ctx, final Collection<Menu> value)
+	{
+		setLinkedItems( 
+			ctx,
+			false,
+			RecipesConstants.Relations.MENU2RECIPE,
+			null,
+			value,
+			false,
+			false,
+			Utilities.getMarkModifiedOverride(MENU2RECIPE_MARKMODIFIED)
+		);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Recipe.menus</code> attribute. 
+	 * @param value the menus
+	 */
+	public void setMenus(final Collection<Menu> value)
+	{
+		setMenus( getSession().getSessionContext(), value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Adds <code>value</code> to menus. 
+	 * @param value the item to add to menus
+	 */
+	public void addToMenus(final SessionContext ctx, final Menu value)
+	{
+		addLinkedItems( 
+			ctx,
+			false,
+			RecipesConstants.Relations.MENU2RECIPE,
+			null,
+			Collections.singletonList(value),
+			false,
+			false,
+			Utilities.getMarkModifiedOverride(MENU2RECIPE_MARKMODIFIED)
+		);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Adds <code>value</code> to menus. 
+	 * @param value the item to add to menus
+	 */
+	public void addToMenus(final Menu value)
+	{
+		addToMenus( getSession().getSessionContext(), value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Removes <code>value</code> from menus. 
+	 * @param value the item to remove from menus
+	 */
+	public void removeFromMenus(final SessionContext ctx, final Menu value)
+	{
+		removeLinkedItems( 
+			ctx,
+			false,
+			RecipesConstants.Relations.MENU2RECIPE,
+			null,
+			Collections.singletonList(value),
+			false,
+			false,
+			Utilities.getMarkModifiedOverride(MENU2RECIPE_MARKMODIFIED)
+		);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Removes <code>value</code> from menus. 
+	 * @param value the item to remove from menus
+	 */
+	public void removeFromMenus(final Menu value)
+	{
+		removeFromMenus( getSession().getSessionContext(), value );
 	}
 	
 	/**

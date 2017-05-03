@@ -31,7 +31,14 @@
 	       <sourceElement type="Recipe" qualifier="recipe" cardinality="one" />
 	       <targetElement type="RecipeEntry" qualifier="recipeEntry" cardinality="many"/>
 	    </relation>
+	    
+	    <relation code="Menu2Recipe" localized="false" generate="true" autocreate="true">
+	    	 <deployment table="Menu2Recipe" typecode="30004" />
+	       <sourceElement type="Menu" qualifier="menus" cardinality="many" />
+	       <targetElement type="Recipe" qualifier="recipes" cardinality="many"/>
+	    </relation>
 	</relations> 
+	
 
 	<itemtypes>
 	
@@ -123,6 +130,20 @@
 			</attributes>
 			
 			</itemtype>
+			
+        <itemtype code="Menu" generate="true" autocreate="true">
+            <deployment table="Menu" typecode="30005" />
+            <attributes>
+                <attribute qualifier="code" type="java.lang.String" >
+                    <persistence type="property" />
+						  <modifiers optional="false" unique = "true"/>
+                </attribute>
+                <attribute qualifier="nome" type="java.lang.String">
+                    <persistence type="property" />
+                </attribute>
+            </attributes>
+        </itemtype>
+   
 <!--
 		<itemtype generate="true"
 		   code="MyProduct"

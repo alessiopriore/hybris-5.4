@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 2-mag-2017 17.18.42                         ---
+ * --- Generated at 3-mag-2017 12.12.11                         ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -23,10 +23,12 @@ import de.hybris.platform.jalo.JaloBusinessException;
 import de.hybris.platform.jalo.JaloSystemException;
 import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.extension.Extension;
+import de.hybris.platform.jalo.link.Link;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
 import de.hybris.platform.recipes.constants.RecipesConstants;
 import de.hybris.platform.recipes.jalo.Food;
+import de.hybris.platform.recipes.jalo.Menu;
 import de.hybris.platform.recipes.jalo.Recipe;
 import de.hybris.platform.recipes.jalo.RecipeEntry;
 import java.util.HashMap;
@@ -80,6 +82,32 @@ public abstract class GeneratedRecipesManager extends Extension
 	public Food createFood(final Map attributeValues)
 	{
 		return createFood( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Menu createMenu(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( RecipesConstants.TC.MENU );
+			return (Menu)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Menu : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Menu createMenu(final Map attributeValues)
+	{
+		return createMenu( getSession().getSessionContext(), attributeValues );
 	}
 	
 	public Recipe createRecipe(final SessionContext ctx, final Map attributeValues)
