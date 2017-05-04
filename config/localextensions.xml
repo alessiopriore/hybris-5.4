@@ -21,7 +21,8 @@
         <extension name="cuppytrail" />
         <extension name="cuppytrailhmc" /> 
         <extension name="Recipes" /> 
-        <extension name="cuppytrailfrontend" />   
+        <extension name="cuppytrailfrontend" />
+        <extension name="cuppytrailcockpit" />
                      
     </extensions>
 </hybrisconfig>
