@@ -91,6 +91,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 				single_createattr_Stadium_StadiumType();
 			
+				single_createattr_MatchBet_matchScore();
+			
 		createRelationAttributes(
 			"StadiumMatchRelation", 
 			false, 
@@ -166,6 +168,19 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
+	public void single_createattr_MatchBet_matchScore() throws JaloBusinessException
+	{
+		
+				createDynamicAttribute(
+					"MatchBet", 
+					"matchScore",  
+					"java.lang.Integer",
+					null,
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG
+				);
+			
+	}
+	
 
 
 	/**
@@ -235,6 +250,18 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			single_setAttributeProperties_Stadium_capacity();
 		
 			single_setAttributeProperties_Stadium_StadiumType();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
+				changeMetaType(
+					"MatchBet",
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_MatchBet_matchScore();
 		
 				setDefaultProperties(
 					"StadiumType",
@@ -317,6 +344,28 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 								null,
 								customPropsMap,
 								null
+							);
+						}
+					
+						public void single_setAttributeProperties_MatchBet_matchScore() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"MatchBet", 
+								"matchScore",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								"matchBetScoreAttributeHandler"
 							);
 						}
 					

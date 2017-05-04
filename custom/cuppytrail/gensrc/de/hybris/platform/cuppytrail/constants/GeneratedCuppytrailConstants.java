@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 4-mag-2017 13.03.24                         ---
+ * --- Generated at 4-mag-2017 15.10.35                         ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -36,6 +36,10 @@ public class GeneratedCuppytrailConstants
 		public static class Match
 		{
 			public static final String STADIUM = "stadium".intern();
+		}
+		public static class MatchBet
+		{
+			public static final String MATCHSCORE = "matchScore".intern();
 		}
 	}
 	public static class Enumerations
